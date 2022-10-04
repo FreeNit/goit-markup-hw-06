@@ -299,13 +299,13 @@ a {
 }
 
 .backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  /* opacity: 0; */
+  /* pointer-events: none; */
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1) rotate(90deg);
-  opacity: 0;
+  /* transform: translate(-50%, -50%) scale(1.1) rotate(90deg); */
+  /* opacity: 0; */
 }
 
 .modal {
@@ -315,11 +315,12 @@ a {
 
   min-height: 581px;
   min-width: 582px;
+  padding: 40px 40px;
 
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
   opacity: 1;
-  transition: transform var(--transition-duration) var(--cubic-bezier), opacity var(--transition-duration) var(--cubic-bezier);
+  /* transition: transform var(--transition-duration) var(--cubic-bezier), opacity var(--transition-duration) var(--cubic-bezier); */
 }
 
 .close-btn {
@@ -347,6 +348,57 @@ a {
 
 .close-btn:hover {
   color: var(--main-decor-color);
+}
+
+.backdrop-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.contact-form .form-label {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.contact-form-input {
+  padding: 14px 15px 14px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+
+  fill: var(--secondary-text-color);
+}
+
+.contact-form-input:focus {
+  border-color: var(--main-decor-color);
+}
+
+.contact-form-input:focus~.contact-form-icon {
+  fill: var(--main-decor-color);
 }
 
 /* OUR ADVANTAGES */
