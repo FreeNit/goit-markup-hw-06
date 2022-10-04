@@ -299,13 +299,13 @@ a {
 }
 
 .backdrop.is-hidden {
-  /* opacity: 0; */
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .backdrop.is-hidden .modal {
-  /* transform: translate(-50%, -50%) scale(1.1) rotate(90deg); */
-  /* opacity: 0; */
+  transform: translate(-50%, -50%) scale(1.1) rotate(90deg);
+  opacity: 0;
 }
 
 .modal {
@@ -320,7 +320,7 @@ a {
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
   opacity: 1;
-  /* transition: transform var(--transition-duration) var(--cubic-bezier), opacity var(--transition-duration) var(--cubic-bezier); */
+  transition: transform var(--transition-duration) var(--cubic-bezier), opacity var(--transition-duration) var(--cubic-bezier);
 }
 
 .close-btn {
@@ -356,11 +356,10 @@ a {
   line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
-  margin-top: 40px;
   margin-bottom: 30px;
 }
 
-.contact-form-field {
+.contact-form-field:not(last-child) {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -382,6 +381,11 @@ a {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
 
 .contact-form-icon {
@@ -391,15 +395,91 @@ a {
   transform: translateY(-50%);
 
   fill: var(--secondary-text-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
 }
 
-.contact-form-input:focus {
+.contact-form-input:focus,
+.form-area:focus {
   border-color: var(--main-decor-color);
 }
 
-.contact-form-input:focus~.contact-form-icon {
+/* Old variant */
+/* .contact-form-input:focus~.contact-form-icon {
+  fill: var(--main-decor-color);
+} */
+
+/* Modern variant with :focus-within pseudo-class*/
+.contact-form-field:focus-within .contact-form-icon {
   fill: var(--main-decor-color);
 }
+
+.contact-form-field.field-area {
+  margin-bottom: 20px;
+}
+
+.form-checkbox {
+  margin-bottom: 30px;
+}
+
+.form-area {
+  resize: none;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  line-height: 1.71;
+}
+
+.checkbox-input {
+  appearance: none;
+  position: absolute;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 2px;
+  fill: var(--third-decor-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier), background-color var(--transition-duration) var(--cubic-bezier), border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.checkbox-input:checked+.icon-check {
+  fill: var(--third-decor-color);
+  background-color: var(--main-decor-color);
+  border-color: var(--main-decor-color);
+}
+
+.policy {
+  color: var(--main-decor-color);
+  text-decoration: underline;
+}
+
+.btn-contact-form-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 52px;
+  background-color: var(--main-decor-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  color: var(--third-decor-color);
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.btn-contact-form-submit:hover {
+  background-color: var(--secondary-decor-color);
+}
+
 
 /* OUR ADVANTAGES */
 
