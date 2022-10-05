@@ -314,7 +314,7 @@ a {
   left: 50%;
 
   min-height: 581px;
-  min-width: 582px;
+  min-width: 528px;
   padding: 40px 40px;
 
   background-color: #fff;
@@ -384,7 +384,7 @@ a {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--secondary-text-color);
   transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
 
@@ -424,16 +424,35 @@ a {
 .form-area {
   resize: none;
   height: 120px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
   transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
 
+.form-area::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .checkbox-label {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: block;
   line-height: 1.71;
+  text-align: center;
 }
 
 .checkbox-input {
@@ -442,11 +461,12 @@ a {
 }
 
 .icon-check {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 1px solid var(--secondary-text-color);
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(33, 33, 33, 0.7);
   border-radius: 2px;
   fill: var(--third-decor-color);
   transition: fill var(--transition-duration) var(--cubic-bezier), background-color var(--transition-duration) var(--cubic-bezier), border-color var(--transition-duration) var(--cubic-bezier);
@@ -467,11 +487,10 @@ a {
   display: block;
   margin: 0 auto;
   padding: 10px 52px;
+  letter-spacing: 0.06em;
+  color: var(--third-decor-color);
   background-color: var(--main-decor-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: transparent;
-  color: var(--third-decor-color);
   cursor: pointer;
   transition: background-color var(--transition-duration) var(--cubic-bezier);
 }
@@ -746,7 +765,8 @@ a {
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
