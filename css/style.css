@@ -316,6 +316,8 @@ a {
   min-height: 581px;
   min-width: 528px;
   padding: 40px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
@@ -361,7 +363,7 @@ a {
   line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .contact-form .form-label {
@@ -380,11 +382,11 @@ a {
 }
 
 .contact-form-input {
-  padding: 14px 15px 14px 42px;
+  padding: 11px 15px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
