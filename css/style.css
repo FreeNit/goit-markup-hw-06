@@ -346,8 +346,13 @@ a {
   fill: currentColor;
 }
 
-.close-btn:hover {
+.close-btn:hover,
+.close-btn:focus {
   color: var(--main-decor-color);
+}
+
+.contact-form-field {
+  margin-bottom: 10px;
 }
 
 .backdrop-title {
@@ -359,16 +364,8 @@ a {
   margin-bottom: 30px;
 }
 
-.contact-form-field:not(last-child) {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 28px;
-}
-
 .contact-form .form-label {
-  position: absolute;
-  top: -16px;
+  display: inline-block;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -376,14 +373,20 @@ a {
   margin-bottom: 4px;
 }
 
+.input-thumb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form-input {
   padding: 14px 15px 14px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.16;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
@@ -413,7 +416,9 @@ a {
   fill: var(--main-decor-color);
 }
 
-.contact-form-field.field-area {
+.field-area {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -424,11 +429,11 @@ a {
 .form-area {
   resize: none;
   height: 120px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
   padding: 12px 16px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
@@ -439,10 +444,10 @@ a {
 }
 
 .form-area::placeholder {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -495,7 +500,8 @@ a {
   transition: background-color var(--transition-duration) var(--cubic-bezier);
 }
 
-.btn-contact-form-submit:hover {
+.btn-contact-form-submit:hover,
+.btn-contact-form-submit:focus {
   background-color: var(--secondary-decor-color);
 }
 
